@@ -1,146 +1,162 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
+<head><script src="../assets/js/color-modes.js"></script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.111.3">
-    <title>Pricing example · Bootstrap v5.3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.111.3">
+  <title>Pricing example · Bootstrap v5.3</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/pricing/">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/pricing/">
 
-    
 
-    
 
-<link href="bootstrap.min.css" rel="stylesheet">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+    .img1{
+      width: 35%;
+      height: 35%;
+    }
+    .titulo{
+      background-color: green;
+      color: white;
+    }
+    .tituloP{
+      background-color:gold;
+      color: black;
+    }
+    .img2{
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10%;
 
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-      .img1{
-        width: 70%;
-        height: 70%;
-      }
-      .titulo{
-        background-color: green;
-        color: white;
-      }
-      .tituloP{
-        background-color:gold;
-        color: black;
-      }
+    }
+    .img3{
+      width: 50%;
+      height: 50%;
 
+    }
 
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="pricing.css" rel="stylesheet">
-  </head>
-  <body>
+  </style>
 
 
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <symbol id="check" viewBox="0 0 16 16">
-      <title>Check</title>
-      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-    </symbol>
-  </svg>
+  <!-- Custom styles for this template -->
+  <link href="pricing.css" rel="stylesheet">
+</head>
+<body>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check" viewBox="0 0 16 16">
+    <title>Check</title>
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+</svg>
 
 <div class="container py-3">
   <header>
     <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
-       <img class="logo" src="Imagenes/1280px-XBOX_logo_2012.svg.png">
+      <a href="https://www.xbox.com/es-ES/?xr=mebarnav" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+        <img class="logo" src="Imagenes/1280px-XBOX_logo_2012.svg.png">
 
       </a>
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Features</a>
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Enterprise</a>
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Support</a>
-        <a class="py-2 link-body-emphasis text-decoration-none" href="#">Pricing</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="https://www.xbox.com/es-es/xbox-game-pass/games?xr=shellnav">Catálogo de Juegos</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="https://www.xbox.com/es-ES/cloud-gaming">Cloud Gaming</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="https://www.xbox.com/es-ES/xbox-game-pass/supported-devices">Dispositivos</a>
+        <a class="py-2 link-body-emphasis text-decoration-none" href="https://www.xbox.com/es-ES/xbox-game-pass?xr=shellnav#faq">Preguntas Frecuentes</a>
       </nav>
     </div>
 
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <img class="img1" src="Imagenes/gamePass.png">
+      <a  href="Imagenes/XGP_FY20_PC_GENERAL_HiRes_RGB_horiz-1.jpg" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=1000,height=1200'); return false;" > <img class="img2" src="Imagenes/XGP_FY20_PC_GENERAL_HiRes_RGB_horiz-1.jpg"></a>
+      <img class="img1" src="Imagenes/1024px-Xbox_Game_Pass_2020_logo_-_black_color_version.svg.png">
       <br>
       <br>
 
-      <p class="fs-5 text-body-secondary">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+      <p class="fs-5 text-body-secondary">¿Estás dedicado a los juegos para PC? ¿Está comprometido con tu consola? Hay un plan para ti.
+        Con Ultimate, consíguelo todo, incluso juegos desde la nube, Xbox Live Gold y mucho más.</p>
+<br>
+
     </div>
   </header>
 
@@ -163,9 +179,9 @@
               <li><strong>- Descuentos y ofertas para miembros</strong></li>
               <br>
               <li><strong>- Desbloquea ventajas de Riot Games</strong></li>
-
+              <br><br><br><br><br><br><br><br><br><br>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-success">Únete Ahora</button>
+            <a href="https://www.xbox.com/es-es/games/store/xbox-game-pass-para-consola/cfq7ttc0k"><button type="button" class="w-100 btn btn-lg btn-success">Únete Ahora</button></a>
           </div>
         </div>
       </div>
@@ -177,12 +193,20 @@
           <div class="card-body">
             <h1 class="card-title pricing-card-title">9,99€<small class="text-body-secondary fw-medium">/mes</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>20 users included</li>
-              <li>10 GB of storage</li>
-              <li>Priority email support</li>
-              <li>Help center access</li>
+              <li><strong>- Disfruta de cientos de juegos de alta calidad en tu PC</strong></li>
+              <br>
+              <li><strong>- Nuevos juegos que se añaden constantemente</strong></li>
+              <br>
+              <li><strong>- Títulos de Xbox Game Studios el mismo día de su lanzamiento</strong></li>
+              <br>
+              <li><strong>- Descuentos y ofertas para miembros</strong></li>
+              <br>
+              <li><strong>- Desbloquea ventajas de Riot Games</strong></li>
+              <br>
+              <li><strong>- Incluye EA Play</strong></li>
+              <br><br><br><br><br><br><br><br>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-success">Únete Ahora</button>
+            <a href="https://www.xbox.com/es-es/games/store/game-pass-para-pc/cfq7ttc0kgq8/0002?rtc=1"><button type="button" class="w-100 btn btn-lg btn-success">Únete Ahora</button></a>
           </div>
         </div>
       </div>
@@ -194,69 +218,98 @@
           <div class="card-body">
             <h1 class="card-title pricing-card-title">12,99€<small class="text-body-secondary fw-medium">/mes</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>30 users included</li>
-              <li>15 GB of storage</li>
-              <li>Phone and email support</li>
-              <li>Help center access</li>
+              <li><strong>- Disfruta de cientos de juegos de alta calidad en tu consola, PC y la nube</strong></li>
+              <br>
+              <li><strong>- Nuevos juegos que se añaden constantemente</strong></li>
+              <br>
+              <li><strong>- Títulos de Xbox Game Studios el mismo día de su lanzamiento</strong></li>
+              <br>
+              <li><strong>- Descuentos y ofertas exclusivas para miembros</strong></li>
+              <br>
+              <li><strong>- Recompensas gratuitas, como contenido en el juego y ofertas de socios</strong></li>
+              <br>
+              <li><strong>- Desbloquea ventajas de Riot Games</strong></li>
+              <br>
+              <li><strong>- Incluye EA Play</strong></li>
+              <br>
+              <li><strong>- Incluye Xbox Live Gold</strong></li>
+              <br>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-warning">Únete Ahora</button>
+            <a href="https://www.xbox.com/es-es/games/store/xbox-game-pass-ultimate/cfq7ttc0khs0/0007"><button type="button" class="w-100 btn btn-lg btn-warning">Únete Ahora</button></a>
           </div>
         </div>
       </div>
     </div>
 
-    <h2 class="display-6 text-center mb-4">Compare plans</h2>
+  <div class="text-center">
+    <br>
+    <img  class="img3" src="Imagenes/gamePass.png">
+    <br>
+    <br>
+  </div>
 
     <div class="table-responsive">
       <table class="table text-center">
         <thead>
-          <tr>
-            <th style="width: 34%;"></th>
-            <th style="width: 22%;">Free</th>
-            <th style="width: 22%;">Pro</th>
-            <th style="width: 22%;">Enterprise</th>
-          </tr>
+        <tr>
+          <th style="width: 34%;"></th>
+          <th style="width: 22%;">Consola</th>
+          <th style="width: 22%;">PC</th>
+          <th style="width: 22%;">Ultimate</th>
+        </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row" class="text-start">Public</th>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          </tr>
-          <tr>
-            <th scope="row" class="text-start">Private</th>
-            <td></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          </tr>
+        <tr>
+          <th scope="row" class="text-start">Juegos</th>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Novedades</th>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        </tr>
         </tbody>
 
         <tbody>
-          <tr>
-            <th scope="row" class="text-start">Permissions</th>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          </tr>
-          <tr>
-            <th scope="row" class="text-start">Sharing</th>
-            <td></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          </tr>
-          <tr>
-            <th scope="row" class="text-start">Unlimited members</th>
-            <td></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          </tr>
-          <tr>
-            <th scope="row" class="text-start">Extra security</th>
-            <td></td>
-            <td></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          </tr>
+        <tr>
+          <th scope="row" class="text-start">Títulos Propios</th>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Ofertas</th>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Riot Games</th>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">EA Play</th>
+          <td></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Recompensas</th>
+          <td></td>
+          <td></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Xbox Live Gold</th>
+          <td></td>
+          <td></td>
+          <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+
         </tbody>
       </table>
     </div>
@@ -301,7 +354,7 @@
   </footer>
 </div>
 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    
-  </body>
+</body>
 </html>
