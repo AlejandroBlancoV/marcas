@@ -97,6 +97,8 @@
         width: 100%;
         height: 100%;
         z-index: -1;
+        padding-top: 3%;
+
       }
 
       /* Asegúrate de que el video ocupe todo el espacio disponible */
@@ -105,13 +107,19 @@
         height: 100%;
         object-fit: cover;
       }
+      .img1{
+        width: 30%;
+        height: 30%;
+      }
+
     </style>
 
     
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
+    <link href="navbars-offcanvas.css" rel="stylesheet">
   </head>
-  <body class="d-flex h-100 text-center text-bg-dark">
+  <body class="d-flex h-100 text-center text-bg-light">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -128,50 +136,17 @@
       </symbol>
     </svg>
 
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle theme (auto)">
-        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
-    </div>
 
-    
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" >
   <header class="mb-auto">
     <div>
-      <h3 class="float-md-start mb-0">Cover</h3>
+      <a href="https://www.samsung.com/es/" target="_blank"><img class="img1" src="Imagenes/gnb-desktop-120x32.png"></a>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+        <a class="nav-link fw-bold py-1 px-0 active text-black" aria-current="page" href="https://www.samsung.com/es/mobile/" target="_blank">Móviles</a>
+        <a class="nav-link fw-bold py-1 px-0 active text-black" href="https://www.samsung.com/es/tvs/" target="_blank">Televisiones</a>
+        <a class="nav-link fw-bold py-1 px-0 active text-black" href="https://www.samsung.com/es/computers/all-computers/" target="_blank">Galaxy Book</a>
       </nav>
     </div>
   </header>
@@ -179,21 +154,21 @@
   <main class="px-3">
     <div id="video-background">
       <video autoplay muted loop>
-        <source src="ruta_del_video/video.mp4" type="video/mp4">
+        <source src="Galaxy%20S23%20Ultra_%20Official%20Introduction%20Film%20_%20Samsung.mp4" type="video/mp4">
         <!-- Añade aquí más etiquetas <source> para diferentes formatos de video -->
       </video>
     </div>
 
     <!-- Aquí va el resto del contenido de tu página -->
-    <h1>Cover your page.</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <h1 style="color: white"><strong>GALAXY S23</strong></h1>
+    <p class="lead" style="color: white">Descubre la nueva generación de Galaxy con el Galaxy S23, y empieza a disfrutar de todo el potencial al alcance de tu mano.</p>
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
+      <a href="index2.html" class="btn btn-lg btn-light fw-bold border-white bg-white">Descubre más</a>
     </p>
   </main>
 
   <footer class="mt-auto text-white-50">
-    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">p3 hab305</a>.</p>
   </footer>
 </div>
 
