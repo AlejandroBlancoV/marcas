@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tu Página</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="styles.css"> <!-- Cambia la ruta según tu estructura de archivos -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="script.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Página</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Cambia la ruta según tu estructura de archivos -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</head>
 <body>
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Título Centrado</a>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="header">
+            <a class="navbar-brand" href="#">
+                <img src="Imagenes/LaLiga_2023_Horizontal_Logo.svg.png" alt="Logo" height="40" class="imgPortada"> <!-- Ajusta la ruta según tu estructura de archivos -->
+            </a>
+            
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="Hamburguesa">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+       
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto"> <!-- Utiliza ml-auto para alinear a la derecha -->
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Inicio</a>
                 </li>
@@ -42,14 +47,14 @@
         </div>
     </div>
 </nav>
+
 <!-- Agrega una imagen centrada debajo del Navbar -->
-<div class="container mt-5 pt-3">
+<div class="containerImgPrincipal">
     <div class="text-center">
-        <img src="ruta_de_tu_imagen.jpg" alt="Descripción de la imagen" class="img-fluid">
+        <img src="Imagenes/ruta_de_tu_imagen.jpg" alt="Descripción de la imagen" class="img-fluid"> <!-- Ajusta la ruta según tu estructura de archivos -->
     </div>
 </div>
 <!-- Contenido de tu página va aquí -->
-
 
 </body>
 </html>
